@@ -17,6 +17,7 @@
 		5CD4BCD62838A26A003B004F /* RegistrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD4BCD52838A26A003B004F /* RegistrarViewController.swift */; };
 		9D2F645B283995C700E6D7E7 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F645A283995C700E6D7E7 /* NewConversationViewController.swift */; };
 		9D2F645D283995D600E6D7E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F645C283995D600E6D7E7 /* ProfileViewController.swift */; };
+		9D2F645F28399BBE00E6D7E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F645E28399BBE00E6D7E7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5CD4BCD52838A26A003B004F /* RegistrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarViewController.swift; sourceTree = "<group>"; };
 		9D2F645A283995C700E6D7E7 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		9D2F645C283995D600E6D7E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9D2F645E28399BBE00E6D7E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				5CD4BCB6283896C7003B004F /* ConversacionesViewController.swift */,
-				5CD4BCD82838AA0C003B004F /* Login */,
 				9D2F645A283995C700E6D7E7 /* NewConversationViewController.swift */,
 				9D2F645C283995D600E6D7E7 /* ProfileViewController.swift */,
+				5CD4BCD82838AA0C003B004F /* Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -113,6 +115,7 @@
 			children = (
 				5CD4BCB2283896C7003B004F /* AppDelegate.swift */,
 				5CD4BCB4283896C7003B004F /* SceneDelegate.swift */,
+				9D2F645E28399BBE00E6D7E7 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				9D2F645B283995C700E6D7E7 /* NewConversationViewController.swift in Sources */,
 				5CD4BCD22838A257003B004F /* LoginViewController.swift in Sources */,
 				5CD4BCD62838A26A003B004F /* RegistrarViewController.swift in Sources */,
+				9D2F645F28399BBE00E6D7E7 /* Extensions.swift in Sources */,
 				5CD4BCB7283896C7003B004F /* ConversacionesViewController.swift in Sources */,
 				9D2F645D283995D600E6D7E7 /* ProfileViewController.swift in Sources */,
 				5CD4BCB3283896C7003B004F /* AppDelegate.swift in Sources */,
