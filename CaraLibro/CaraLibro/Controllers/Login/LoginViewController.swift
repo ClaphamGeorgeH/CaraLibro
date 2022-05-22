@@ -1,9 +1,3 @@
-//
-//  LoginViewController.swift
-//  CaraLibro
-//
-//  Created by user206601 on 5/21/22.
-//
 
 import UIKit
 
@@ -75,6 +69,11 @@ class LoginViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(didTapRegister))
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        
+        emailField.delegate = self
+        passwordField.delegate = self
+        
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         scrollView.addSubview(emailField)
@@ -107,13 +106,46 @@ class LoginViewController: UIViewController {
         
     }
     
+    @objc private func loginButtonTapped(){
+        
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        
+        guard let email = emailField.text, let password = passwordField.text,
+              !email.isEmpty,!password.isEmpty else{
+            return
+        }
+    }
+    
+    func alertUserLoginError(){
+        let alert = UIAlertController(title:"Ups!",
+                                      message:"Please agregre toda la informacion requerida.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title:"Dismiss",
+                                      style: .cancel, handler: nil))
+        present(alert,animated: true)
+        
+    }
+    
     @objc private func didTapRegister(){
         let vc = RegistrarViewController()
         vc.title = "Create Account"
         navigationController?.pushViewController(vc, animated: true)
     }
+}
+extension LoginViewController : UITextFieldDelegate {
     
-
-   
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == emailField {
+            passwordField.becomeFirstResponder()
+        }
+        else if textField == passwordField {
+            loginButtonTapped()
+            
+        }
+        
+        return true
+    }
+    
 }
